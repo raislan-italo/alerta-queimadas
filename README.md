@@ -1,7 +1,7 @@
 # 🌳🔥 Alerta Florestas
 
 <p align="center">
-  <img src="<!-- INSIRA AQUI O LINK DA SUA LOGO -->" alt="Alerta Florestas Logo" width="200"/>
+  <img src="" alt="Alerta Florestas Logo" width="200"/>
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 
 <div align="center">
   <!-- Coloque aqui uma imagem ou gif animado mostrando o site -->
-  <img src="<!-- INSIRA LINK DO GIF OU IMAGEM -->" alt="Demonstração do projeto" />
+  <img src="<>" alt="Demonstração do projeto" />
 </div>
 
 ---
@@ -67,18 +67,18 @@ O **Alerta Florestas** une tecnologia, interatividade e consciência ambiental p
 
 ### 💻 Desktop
 
-![Desktop Screenshot](<!-- INSIRA LINK DA IMAGEM -->)
+![Desktop Screenshot](<>)
 
 ### 📱 Mobile
 
-![Mobile Screenshot](<!-- INSIRA LINK DA IMAGEM -->)
+![Mobile Screenshot](<>)
 
 ---
 
 ## 🎥 Demonstração em vídeo
 
 > 📹 **Assista ao vídeo completo do projeto:**  
-> [🔗 Clique aqui para assistir](<!-- INSIRA LINK DO VÍDEO -->)
+> [🔗 Clique aqui para assistir](<>)
 
 ---
 
