@@ -1,8 +1,7 @@
-// Interface com os tipos de dados retornados pela API
-export default interface IFocoMunipio {
-  municipio: string,
-  focos: number,
-  percentual: number,
+export default interface IFocoMunicipio {
+  municipio: string;
+  focos: number;
+  percentual: number;
   latitude: number;
-  longitude: number
+  longitude: number;
 }

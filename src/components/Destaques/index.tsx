@@ -1,7 +1,14 @@
-import IFocoMunipio from "../../interfaces/IFocoMunicipio";
+import IFocoMunicipio from "../../interfaces/IFocoMunicipio";
+import Marquee from "react-fast-marquee";
+import {
+  Card,
+  CardContent,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 interface Props {
-  dados: IFocoMunipio[];
+  dados: IFocoMunicipio[];
 }
 
 export default function Destaques({ dados }: Props) {
@@ -13,20 +20,34 @@ export default function Destaques({ dados }: Props) {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-16 mb-8">
-      {top5.map((item, index) => (
-        <div
-          key={index}
-          onClick={() => abrirGoogleMaps(item.latitude, item.longitude)}
-          className="bg-white p-4 rounded-xl shadow cursor-pointer hover:scale-105 transition"
-          title="Clique para ver no mapa"
-        >
-          <img src="/src/assets/img/ilustracaoMapa.svg" alt="mapa" className="w-25 mx-auto mb-2" />
-          <p className="font-bold text-center font-[Poppins]">{item.municipio}</p>
-          <p className="text-red-600 text-sm text-center font-[Poppins]">Foco de calor: {item.focos}</p>
-          <p className="text-gray-600 text-sm text-center font-[Poppins]">Percentual: {item.percentual}%</p>
-        </div>
-      ))}
-    </div>
+    <Marquee pauseOnHover speed={80} gradient={false} direction="right">
+      <div className="flex gap-6 py-4 mb-10">
+        {top5.map((item, index) => (
+          <Card
+            key={index}
+            onClick={() => abrirGoogleMaps(item.latitude, item.longitude)}
+            className="w-60 cursor-pointer hover:scale-105 tracking-all duration-300 hover:shadow-2xl border-2 border-gray-100 hover:border-red-400"
+            title="Clique para ver no mapa"
+          >
+            <CardContent className="flex flex-col items-center p-4">
+              <img
+                src="/src/assets/img/ilustracaoMapa.svg"
+                alt="mapa"
+                className="w-25 mx-auto mb-2"
+              />
+              <CardTitle className="text-center font-[Poppins text-gray-800">
+                {item.municipio}
+              </CardTitle>
+              <CardDescription className="text-red-600 teext-sm text-center font-[Poppins] mb-1">
+                Foco de calor: {item.focos}
+              </CardDescription>
+              <CardDescription className="text-gray-600 text-sm text-center font-[Poppins]">
+                {item.percentual} %
+              </CardDescription>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </Marquee>
   );
 }
