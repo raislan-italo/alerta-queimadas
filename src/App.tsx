@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/home";
-import Denuncia from "./pages/Denuncia";
+import Denuncia from "./pages/FormDenuncia";
 import Sobre from "./pages/Sobre";
 import Login from "./pages/Login";
 
