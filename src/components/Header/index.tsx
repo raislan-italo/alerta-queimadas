@@ -4,17 +4,36 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
-
-  // Simulação: mude para true/false conforme precisar
   const [usuarioLogado, setUsuarioLogado] = useState(false);
-
   const location = useLocation();
+  const navigate = useNavigate();
+
+  // Verificar se usuário está logado (localStorage/sessionStorage)
+  useEffect(() => {
+    const token = localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
+    setUsuarioLogado(!!token);
+  }, []);
+
+  const handleLogin = () => {
+    navigate("/login");
+  };
+
+  const handleLogout = () => {
+    // Limpar dados de autenticação
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("usuario");
+    sessionStorage.removeItem("authToken");
+    sessionStorage.removeItem("usuario");
+    
+    setUsuarioLogado(false);
+    navigate("/");
+  };
 
   return (
     <header className="bg-[#082916] text-white px-6 py-4 flex justify-between items-center shadow relative z-50 font-main">
@@ -98,7 +117,7 @@ export default function Header() {
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   className="px-4 py-2 hover:bg-[#ACD137] hover:text-black cursor-pointer rounded transition-all"
-                  onClick={() => setUsuarioLogado(false)}
+                  onClick={handleLogout}
                 >
                   Sair
                 </DropdownMenuItem>
@@ -106,7 +125,7 @@ export default function Header() {
             ) : (
               <DropdownMenuItem
                 className="px-4 py-2 hover:bg-[#ACD137] hover:text-black cursor-pointer rounded transition-all"
-                onClick={() => setUsuarioLogado(true)}
+                onClick={handleLogin}
               >
                 Fazer login
               </DropdownMenuItem>
