@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/assets/logo.svg" alt="Logo Alerta Florestas" width="250"/>
+  <img src="src/assets/logodaempresa.svg" alt="Logo Alerta Florestas" width="250"/>
 </p>
 
 <p align="center">
