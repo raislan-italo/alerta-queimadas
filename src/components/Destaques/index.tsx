@@ -27,23 +27,23 @@ export default function Destaques({ dados }: Props) {
           <Card
             key={index}
             onClick={() => abrirGoogleMaps(item.latitude, item.longitude)}
-            className="w-60 cursor-pointer hover:scale-105 tracking-all duration-300 hover:shadow-2xl border-2 border-gray-100 hover:border-red-400"
+            className="w-50 cursor-pointer transition-transform duration-200 hover:scale-105 hover:shadow-2xl bg-gradient-to-br from-[#ffffff] to-[#f0f0f0] hover:from-[#ffefef] hover:to-[#ffeaea] shadow-md hover:shadow-red-300"
             title="Clique para ver no mapa"
           >
             <CardContent className="flex flex-col items-center p-4">
               <img
                 src={mapaIcon}
-                alt="mapa"
-                className="w-25 mx-auto mb-2"
+                alt="Ícone mapa"
+                className="w-30 mx-auto mb-10 drop-shadow-md"
               />
-              <CardTitle className="text-center font-[Poppins text-gray-800">
+              <CardTitle className="text-center font-[Poppins] text-gray-800">
                 {item.municipio}
               </CardTitle>
-              <CardDescription className="text-red-600 teext-sm text-center font-[Poppins] mb-1">
-                Foco de calor: {item.focos}
+              <CardDescription className="text-red-600 text-sm text-center font-[Poppins] mb-1">
+                Foco de calor: <span className="font-bold">{item.focos}</span>
               </CardDescription>
               <CardDescription className="text-gray-600 text-sm text-center font-[Poppins]">
-                {item.percentual} %
+                {item.percentual}%
               </CardDescription>
             </CardContent>
           </Card>
