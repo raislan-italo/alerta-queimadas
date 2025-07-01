@@ -28,7 +28,7 @@ export default function DateTimePicker({ date, setDate, time, setTime }: Props) 
             <Button
               variant="outline"
               id="date-picker"
-              className="w-full justify-between font-normal"
+              className="w-full justify-between font-normal cursor-pointer"
             >
               {date ? date.toLocaleDateString("pt-BR") : "Selecionar data"}
               <ChevronDownIcon />
@@ -54,6 +54,7 @@ export default function DateTimePicker({ date, setDate, time, setTime }: Props) 
           id="time-picker"
           value={time}
           onChange={(e) => setTime(e.target.value)}
+          className="cursor-pointer"
         />
       </div>
     </div>

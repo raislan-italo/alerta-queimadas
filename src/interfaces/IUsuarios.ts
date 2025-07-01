@@ -1,8 +1,8 @@
 export default interface IUsuario {
-  id?: string;
   nome: string;
   email: string;
-  senha?: string;
+  senha: string;
+  confirmarSenha: string
   avatar?: string;
   dataCriacao?: Date;
   ultimoLogin?: Date;
@@ -11,12 +11,5 @@ export default interface IUsuario {
 export interface ILoginForm {
   email: string;
   senha: string;
-  lembrarMe?: boolean;
-}
-
-export interface ILoginResponse {
-  sucesso: boolean;
-  usuario?: IUsuario;
-  token?: string;
-  mensagem?: string;
+  lembrarMe?: boolean
 }

@@ -19,7 +19,7 @@ interface GraficoBarrasProps {
 }
 
 export default function GraficoBarras({ dados, total }: GraficoBarrasProps) {
-  const top25 = dados
+  const top25 = dados.slice(0, 25);
 
   // Controle manual para abrir no hover
   const [openPopover, setOpenPopover] = useState(false);

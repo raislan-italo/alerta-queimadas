@@ -14,7 +14,6 @@ export default function FotosUploader({ onFotoChange, fotos }: Props) {
   const handleFileChange = (evento: React.ChangeEvent<HTMLInputElement>) => {
     const newFiles = Array.from(evento.target.files || []);
 
-    // Limitar 3 fotos
     if (newFiles.length + fotos.length > 3) {
       alert("Você pode enviar no máximo 3 fotos");
       return;
@@ -29,7 +28,7 @@ export default function FotosUploader({ onFotoChange, fotos }: Props) {
         type="button"
         variant="outline"
         onClick={() => fileInputRef.current?.click()}
-        className="flex items-center gap-2 border-2 border-[#acd137] hover:bg-[#acd137] hover:text-black transition-all duration-300 py-6"
+        className="flex items-center gap-2 border-2 border-[#acd137] hover:bg-[#acd137] hover:text-black transition-all duration-300 py-6 cursor-pointer"
       >
         <Camera className="w-6 h-6" />
         Tirar foto ou enviar
@@ -39,7 +38,6 @@ export default function FotosUploader({ onFotoChange, fotos }: Props) {
         ref={fileInputRef}
         type="file"
         accept="image/*"
-        capture="environment"
         className="hidden"
         multiple
         onChange={handleFileChange}
@@ -51,12 +49,19 @@ export default function FotosUploader({ onFotoChange, fotos }: Props) {
 
       <div className="flex gap-2 flex-wrap">
         {fotos.map((file, index) => (
-          <img
+          <a
             key={index}
-            src={URL.createObjectURL(file)}
-            alt={`Foto ${index + 1}`}
-            className="w-20 h-20 object-cover rounded shadow border"
-          />
+            href={URL.createObjectURL(file)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-20 h-20 border rounded shadow overflow-hidden block"
+          >
+            <img
+              src={URL.createObjectURL(file)}
+              alt={`Foto ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </a>
         ))}
       </div>
     </div>

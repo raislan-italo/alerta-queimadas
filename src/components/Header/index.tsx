@@ -33,11 +33,9 @@ export default function Header() {
     // Limpar dados de autenticação
     localStorage.removeItem("authToken");
     localStorage.removeItem("usuario");
-    sessionStorage.removeItem("authToken");
-    sessionStorage.removeItem("usuario");
-    
     setUsuarioLogado(false);
     navigate("/");
+    window.location.reload();
   };
 
   return (
@@ -104,7 +102,7 @@ export default function Header() {
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-48 bg-[#082916] text-white border border-[#ACD137] rounded-xl shadow-lg animate-fade-in"
+            className="w-48 bg-[#082916] text-white border border-[#ACD137] rounded-md shadow-lg animate-fade-in text-center"
             sideOffset={8}
             align="end"
             alignOffset={-20}

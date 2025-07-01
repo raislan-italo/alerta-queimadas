@@ -1,12 +1,17 @@
-import { useState } from "react";
+import http from "@/api";
 import Header from "@/components/Header";
+import { useState } from "react";
 import Footer from "@/components/Footer";
-import LoginForm from "@/components/LoginForm";
-import { ILoginForm } from "../../interfaces/IUsuarios";
-import { fazerLogin } from "@/services/fazerLogin";
 import { useNavigate } from "react-router-dom";
+import CadastroForm from "@/components/CadastroForm";
 
-export default function Login() {
+interface ICadastroForm {
+  nome: string;
+  email: string;
+  senha: string;
+}
+
+export default function Cadastrar() {
   const [loading, setLoading] = useState(false);
   const [mensagem, setMensagem] = useState<{
     tipo: "sucesso" | "erro";
@@ -14,38 +19,38 @@ export default function Login() {
   } | null>(null);
   const navigate = useNavigate();
 
-  const handleLogin = async (dados: ILoginForm) => {
+  const handleCadastrar = async (dados: ICadastroForm) => {
     setLoading(true);
     setMensagem(null);
 
     try {
-      const resultado = await fazerLogin(dados);
+      const resposta = await http.post("/api/usuario/salvar", {
+        nome: dados.nome,
+        email: dados.email,
+        senha: dados.senha,
+      });
 
-      if (resultado != null) {
-        localStorage.setItem("authToken", resultado.headers.authorization || "");
-        localStorage.setItem("usuario", JSON.stringify(resultado.data.user.nome));
-
+      if (resposta.status === 200 || resposta.status === 201) {
         setMensagem({
           tipo: "sucesso",
-          texto: "Login realizado com sucesso!",
+          texto: "Cadastro realizado com sucesso! Redirecionando...",
         });
 
-        // Redirecionar após 1 segundo
+        // Redireciona para login após 2 segundos
         setTimeout(() => {
-          navigate("/");
-        }, 1000);
-
+          navigate("/login");
+        }, 2000);
       } else {
         setMensagem({
           tipo: "erro",
-          texto: "Erro no login",
+          texto: "Erro ao cadastrar. Tente novamente.",
         });
       }
     } catch (error) {
-      console.error("Erro no login:", error);
+      console.error("Erro no cadastro:", error);
       setMensagem({
         tipo: "erro",
-        texto: "Erro interno. Tente novamente.",
+        texto: "Erro ao conectar ao servidor. Tente novamente.",
       });
     } finally {
       setLoading(false);
@@ -57,7 +62,6 @@ export default function Login() {
       <Header />
       <main className="flex-1 flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-md">
-          {/* Mensagem de feedback */}
           {mensagem && (
             <div
               className={`mb-6 p-4 rounded-lg text-center font-medium font-[Poppins] ${
@@ -70,7 +74,7 @@ export default function Login() {
             </div>
           )}
 
-          <LoginForm onLogin={handleLogin} loading={loading} />
+          <CadastroForm onCadastrar={handleCadastrar} loading={loading} />
         </div>
       </main>
 
