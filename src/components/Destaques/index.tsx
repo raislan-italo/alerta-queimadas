@@ -1,5 +1,6 @@
 import IFocoMunicipio from "../../interfaces/IFocoMunicipio";
 import Marquee from "react-fast-marquee";
+import mapaIcon from "@/assets/img/ilustracaoMapa.svg";
 import {
   Card,
   CardContent,
@@ -31,7 +32,7 @@ export default function Destaques({ dados }: Props) {
           >
             <CardContent className="flex flex-col items-center p-4">
               <img
-                src="/src/assets/img/ilustracaoMapa.svg"
+                src={mapaIcon}
                 alt="mapa"
                 className="w-25 mx-auto mb-2"
               />

@@ -4,10 +4,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
+import logoHeader from "@/assets/img/logo.svg";
+import homeIcon from "@/assets/icons/home.svg";
+import dashboardIcon from "@/assets/icons/dashboard.svg";
+import denunciaIcon from "@/assets/icons/denuncia.svg";
+import sobreIcon from "@/assets/icons/sobre.svg";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
-import useAuth from "@/hooks/useAuth";
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -39,7 +43,7 @@ export default function Header() {
   return (
       <header className="bg-[#082916] text-white px-6 py-4 flex justify-between items-center shadow relative z-50 font-main text-e">
         <div>
-          <img src="/src/assets/img/logo.svg" alt="Logo do projeto" />
+          <img src={logoHeader} alt="Logo do projeto" />
         </div>
 
         <button
@@ -70,10 +74,10 @@ export default function Header() {
         md:static md:flex md:flex-row md:gap-4 md:bg-transparent md:w-auto`}
         >
           {[ 
-            { to: "/", label: "Início", icon: "home" },
-            { to: "/dashboard", label: "Dashboard", icon: "dashboard" },
-            { to: "/sobre", label: "Sobre", icon: "sobre" },
-            { to: "/denuncia", label: "Denuncie", icon: "denuncia" },
+            { to: "/", label: "Início", icon: homeIcon },
+            { to: "/dashboard", label: "Dashboard", icon: dashboardIcon },
+            { to: "/sobre", label: "Sobre", icon: sobreIcon },
+            { to: "/denuncia", label: "Denuncie", icon: denunciaIcon },
           ].map((link) => (
             <Link
               key={link.to}
@@ -84,7 +88,7 @@ export default function Header() {
             >
               {link.icon && (
                 <img
-                  src={`/src/assets/icons/${link.icon}.svg`}
+                  src={link.icon}
                   alt={`Ícone ${link.label.toLowerCase()}`}
                   className="w-4 h-4"
                 />

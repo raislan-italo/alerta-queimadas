@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import logoFooter from "@/assets/img/logoDesafio5-2.png"
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         <div className="flex flex-col items-center md:items-start">
           <img
-            src="../src/assets/img/logoDesafio5-2.png"
+            src={logoFooter}
             alt="Logo alerta florestas"
             className="w-28 mb-4"
           />
