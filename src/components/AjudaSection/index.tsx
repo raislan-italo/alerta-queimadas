@@ -1,7 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { Button } from "../ui/button";
-
-
+import { Link } from "react-router-dom";
 
 export default function AjudaSection() {
   const acoes = [
@@ -51,7 +50,7 @@ export default function AjudaSection() {
           </p>
         </div>
         <Button className="bg-[#acd137] text-black hover:bg-[#c3ff00] transition-colors mt-4 md:mt-0 cursor-pointer">
-          Acessar Dashboard
+          <Link to="/dashboard">Acessar Dashboard</Link>
         </Button>
       </div>
 

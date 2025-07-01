@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
-@import "react-clock/dist/Clock.css";
-@import "react-time-picker/dist/TimePicker.css";
 
 @theme {
     --font-main: Poppins;

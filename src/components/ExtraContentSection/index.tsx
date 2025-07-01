@@ -1,6 +1,7 @@
 import { CloudSun, HeartPulse, Leaf, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import imgBombeiros from "/src/assets/img/bombeiros.png";
+
 export default function ExtraContentSection() {
   const infoPrevencoes = [
     {

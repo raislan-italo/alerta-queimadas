@@ -1,4 +1,4 @@
-import Focos from "../data/dados_queimadas_28_06_2025.json";
+import Focos from "../data/dados_queimadas_30_06_2025.json";
 import IFoco from "../interfaces/IFoco";
 import IFocoMunicipio from "../interfaces/IFocoMunicipio";
 
@@ -11,7 +11,6 @@ export default function getFocosPorMunicipio(): ResultadoFocos {
 
   // Cria um objeto para contar focos por município
   const focos = (Focos as { features: IFoco[] }).features;
-  console.log(focos);
   const contagem: Record<string, IFocoMunicipio> = {};
 
   // Percorre cada foco individualmente
