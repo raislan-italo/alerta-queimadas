@@ -39,7 +39,7 @@ export default function AjudaSection() {
       </div>
 
       {/* Bloco 2 */}
-      <div className="bg-[#3f6b0d] text-white py-12 px-80 mx-auto max-auto mb-12 text-left flex flex-col md:flex-row md:items-center md:justify-between">
+      <div className="bg-[#3f6b0d] text-white py-12 px-80 mx-auto max-auto text-left flex flex-col md:flex-row md:items-center md:justify-between ">
         <div className="mb-6 md:mb-0 md:w-2/3">
           <h4 className="text-2xl md:text:2xl font-bold mb-3">Saiba mais!</h4>
           <p className="text-sm md:text-base">
@@ -55,15 +55,18 @@ export default function AjudaSection() {
       </div>
 
       {/* Bloco 3 */}
-      <h3 className="text-xl md:text-2xl font-bold mb-4">
-        Juntos, fazemos a diferença!
-      </h3>
+      <div className="p-10 px-10" >
+        <h3 className=" text-xl md:text-4xl font-bold mb-4">
+          Juntos, fazemos a diferença!
+        </h3>
 
-      <p className="max-w-3xl mx-auto text-gray-700 text-sm md:text-base">
-        Prevenir queimadas é proteger vidas, cuidar da natureza e construir um
-        futuro melhor. Com informação, responsabilidade e união, podemos
-        transformar nosso entorno em um lugar mais seguro e sustentável.
-      </p>
+        <p className="max-w-3xl mx-auto text-gray-700 text-sm md:text-base">
+          Prevenir queimadas é proteger vidas, cuidar da natureza e construir um
+          futuro melhor. Com informação, responsabilidade e união, podemos
+          transformar nosso entorno em um lugar mais seguro e sustentável.
+        </p>
+        
+      </div>
     </section>
   );
 }

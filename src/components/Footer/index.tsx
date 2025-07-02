@@ -6,22 +6,22 @@ export default function Footer() {
   return (
     <footer className="bg-[#082916] text-gray-200 py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img
             src={logoFooter}
             alt="Logo alerta florestas"
-            className="w-28 mb-4"
+            className="w-38 mb-4"
           />
           <p className="text-center md:text-left text-sm font-[Poppins]">
             Monitoramento inteligente para proteção ambiental.
           </p>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center md:start">
           <h4 className="text-lg font-semibold mb-3 font-[Poppins]">
             Links úteis
           </h4>
-          <ul className="space-y-2">
+          <ul className="space-y-2 flex flex-col items-center">
             <li>
               <Link to="/" className="hover:text-green-400 transition-colors">
                 Início
@@ -54,11 +54,11 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center md:start">
           <h4 className="text-lg font-semibold mb-3 font-[Poppins]">
             Fontes de Dados
           </h4>
-          <ul className="space-y-2">
+          <ul className="space-y-2 flex flex-col items-center">
             <li>
               <a href="#" className="hover:text-green-400 transition-colors">
                 IBGE
@@ -77,7 +77,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center md:start">
           <h4 className="text-lg font-semibold mb-3 font-[Poppins]">Contato</h4>
           <p className="text-sm mb-3">contato@alertafloresta.com.br</p>
           <div className="flex space-x-4">
@@ -108,7 +108,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-10 text-center text-xs text-gray-400 font-[Poppins]">
-        © 2025 Alerta Florestas — Todos os direitos reservados
+        © 2025 Alerta Florestas — Todos os direitos reservados.
       </div>
     </footer>
   );
