@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default function Destaques({ dados }: Props) {
-  const top5 = dados.slice(0, 5);
+  const top10 = dados.slice(0, 10);
 
   const abrirGoogleMaps = (lat: number, lng: number) => {
     const url = `https://www.google.com/maps?q=${lat},${lng}&z=15`;
@@ -21,9 +21,9 @@ export default function Destaques({ dados }: Props) {
   };
 
   return (
-    <Marquee pauseOnHover speed={80} gradient={false} direction="right">
+    <Marquee pauseOnHover speed={100} gradient={false} direction="right">
       <div className="flex gap-6 py-4 mb-10">
-        {top5.map((item, index) => (
+        {top10.map((item, index) => (
           <Card
             key={index}
             onClick={() => abrirGoogleMaps(item.latitude, item.longitude)}

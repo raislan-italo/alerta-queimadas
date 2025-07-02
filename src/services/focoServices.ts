@@ -1,4 +1,4 @@
-import Focos from "../data/dados_queimadas_01_06_2025.json";
+import Focos from "../data/dados_queimadas_02_06_2025.json";
 import IFoco from "../interfaces/IFoco";
 import IFocoMunicipio from "../interfaces/IFocoMunicipio";
 
