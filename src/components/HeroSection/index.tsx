@@ -11,7 +11,7 @@ export default function HeroSection() {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="flex flex-col md:flex-row justify-between items-center gap-8 px-6 md:px-16 py-20 font-[Poppins]"
+      className="flex flex-col md:flex-row justify-between items-center gap-8 px-6 md:px-30 py-20 font-[Poppins]"
     >
       <div className="flex-1 text-white">
         <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">

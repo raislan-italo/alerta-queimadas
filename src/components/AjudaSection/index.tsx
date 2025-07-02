@@ -13,57 +13,66 @@ export default function AjudaSection() {
   ];
 
   return (
-    <section className="bg-white py-4 px-4 text-center font-main">
-      <h3 className="text-2xl md:text3xl font-bold text-[#3f6b0d] mb-2">
-        {" "}
-        O que podemos faze para ajudar?{" "}
-      </h3>
+    <section className="bg-white py-12 px-6 font-main text-[#1d1d1d]">
+      {/* Título */}
+      <div className="text-center max-w-3xl mx-auto mb-8">
+        <h3 className="text-2xl md:text-3xl font-bold mb-3">
+          O que podemos fazer para ajudar?
+        </h3>
+        <p className="text-sm md:text-base">
+          Mesmo pequenas ações fazem grande diferença.{" "}
+          <span className="font-semibold text-[#3f6b0d]">
+            Veja como você pode colaborar:
+          </span>
+        </p>
+      </div>
 
-      <p className="mb-8 text-gray-700">
-        Mesmo pequenas ações fazem grande diferença.{" "}
-        <span className="font-semibold text-[#3f6b0d]">
-          Veja como você pode colaborar:
-        </span>
-      </p>
-
-      <div className="flex flex-col items-start max-w-3xl mx-auto space-y-3 mb-12">
+      {/* Lista de Ações */}
+      <div className="flex flex-col gap-3 max-w-4xl mx-auto mb-16">
         {acoes.map((acao, index) => (
           <div
             key={index}
-            className="flex items-start bg-[#e5f5d5] px-4 py-4 rounded-md w-full"
+            className="flex items-start bg-[#e5f5d5] px-4 py-3 rounded-md"
           >
-            <CheckCircle className="w-5 h-5 text-[#3f6b0d] mr-2 flex-shrink-0 mt-1" />
-            <span className="text-left text-gray-700 text-sm"> {acao} </span>
+            <CheckCircle className="w-5 h-5 text-[#3f6b0d] mr-3 mt-1" />
+            <p className="text-sm text-left text-[#1d1d1d]">{acao}</p>
           </div>
         ))}
       </div>
 
-      {/* Bloco 2 */}
-      <div className="bg-[#3f6b0d] text-white py-12 px-6 rounded-lg mx-auto max-w-5xl mb-12 text-left flex flex-col md:flex-row md:items-center md:justify-between">
-        <div className="mb-6 md:mb-0 md:w-2/3">
-          <h4 className="text-xl md:text:2xl font-bold mb-2">Saiba mais!</h4>
-          <p className="text-sm md:text-base">
-            Saiba onde e quando as queimadas estão acontecendo, veja gráficos
-            com focos de incêndio por região. Nosso painel reúne informações
-            atualizadas para ajudar na prevenção e no combate às queimadas.
-            Clique e explore!
-          </p>
+      {/* Bloco verde escuro */}
+      <div className="bg-[#3f6b0d] text-white rounded-lg py-10 px-8 mb-16">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div className="md:w-2/3">
+            <h4 className="text-2xl font-bold mb-2">
+              Acompanhe os dados em tempo real do Alerta Florestas
+            </h4>
+            <p className="text-sm md:text-base text-white">
+              Saiba onde e quando as queimadas estão acontecendo. Veja gráficos com focos de incêndio por região.
+              Nosso painel reúne informações atualizadas para apoiar na prevenção e combate às queimadas. Clique e explore!
+            </p>
+          </div>
+          <div>
+            <Link to="/dashboard">
+              <Button className="bg-[#acd137] text-black hover:bg-[#c3ff00] transition-colors">
+                Acessar Dashboard
+              </Button>
+            </Link>
+          </div>
         </div>
-        <Button className="bg-[#acd137] text-black hover:bg-[#c3ff00] transition-colors mt-4 md:mt-0 cursor-pointer">
-          <Link to="/dashboard">Acessar Dashboard</Link>
-        </Button>
       </div>
 
-      {/* Bloco 3 */}
-      <h3 className="text-xl md:text-2xl font-bold mb-4">
-        Juntos, fazemos a diferença!
-      </h3>
-
-      <p className="max-w-3xl mx-auto text-gray-700 text-sm md:text-base">
-        Prevenir queimadas é proteger vidas, cuidar da natureza e construir um
-        futuro melhor. Com informação, responsabilidade e união, podemos
-        transformar nosso entorno em um lugar mais seguro e sustentável.
-      </p>
+      {/* Final: Juntos fazemos a diferença */}
+      <div className="text-center max-w-3xl mx-auto">
+        <h3 className="text-xl md:text-2xl font-bold mb-4">
+          Juntos, fazemos a diferença!
+        </h3>
+        <p className="text-sm md:text-base text-[#1d1d1d]">
+          Prevenir queimadas é proteger vidas, cuidar da natureza e construir um
+          futuro melhor. Com informação, responsabilidade e união, podemos
+          transformar nosso entorno em um lugar mais seguro e sustentável.
+        </p>
+      </div>
     </section>
   );
 }

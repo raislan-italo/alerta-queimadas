@@ -41,7 +41,7 @@ export default function Header() {
   return (
       <header className="bg-[#082916] text-white px-6 py-4 flex justify-between items-center shadow relative z-50 font-main text-e">
         <div>
-          <img src={logoHeader} alt="Logo do projeto" />
+          <img src={logoHeader} alt="Logo do projeto" />  
         </div>
 
         <button
