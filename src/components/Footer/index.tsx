@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import logoFooter from "@/assets/img/logoDesafio5-2.png"
+import logoFooter from "@/assets/img/logoDesafio5-2-2.png"
 
 export default function Footer() {
   return (
