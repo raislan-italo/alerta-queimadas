@@ -4,7 +4,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
-import logoHeader from "@/assets/img/logo.svg";
+import logoHeader from "@/assets/img/logo3.png";
 import homeIcon from "@/assets/icons/home.svg";
 import dashboardIcon from "@/assets/icons/dashboard.svg";
 import denunciaIcon from "@/assets/icons/denuncia.svg";
@@ -40,8 +40,8 @@ export default function Header() {
 
   return (
       <header className="bg-[#082916] text-white px-6 py-4 flex justify-between items-center shadow relative z-50 font-main text-e">
-        <div>
-          <img src={logoHeader} alt="Logo do projeto" />  
+        <div className="w-80 ">
+          <img src={logoHeader} alt="Logo do projeto"/>
         </div>
 
         <button

@@ -10,12 +10,12 @@ export default function ChamadaIformacaoSection({ onScrollClick }: Props) {
       <h3 className="text-3xl font-bold mb-4">Informação que gera ação</h3>
       <p className="text-lg font-medium max-w-3xl mx-auto">
         O objetivo é fortalecer a participação social e o combate às queimadas
-        por meio da informação, da transparência e da ação coletiva.
+        por<br /> meio da informação, da transparência e da ação coletiva.
       </p>
       <div className="mt-6">
         <Button
           onClick={onScrollClick}
-          className="bg-[#3f6b0d] text-white hover:bg-[#c3ff00] transition-all duration-300 ease-in-out cursor-pointer hover:scale-110"
+          className="bg-[#3f6b0d] hover:bg-[#c3ff00] hover:text-black font-bold transition-all duration-300 ease-in-out cursor-pointer hover:scale-110"
         >
           Fique por dentro!
         </Button>
