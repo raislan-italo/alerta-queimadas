@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import logoFooter from "@/assets/img/logoDesafio5-2-2.png"
+import logoFooter from "@/assets/img/logoDesafio5-2-2.png";
 
 export default function Footer() {
   return (
@@ -17,11 +17,11 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center md:start">
+        <div className="flex flex-col items-center md:items-start">
           <h4 className="text-lg font-semibold mb-3 font-[Poppins]">
             Links úteis
           </h4>
-          <ul className="space-y-2 flex flex-col items-center">
+          <ul className="space-y-2 flex flex-col items-center md:items-start">
             <li>
               <Link to="/" className="hover:text-green-400 transition-colors">
                 Início
@@ -54,32 +54,43 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center md:start">
+        <div className="flex flex-col items-center md:items-start">
           <h4 className="text-lg font-semibold mb-3 font-[Poppins]">
             Fontes de Dados
           </h4>
-          <ul className="space-y-2 flex flex-col items-center">
+          <ul className="space-y-2 flex flex-col items-center md:items-start">
             <li>
-              <a href="https://www.ibge.gov.br/cidades-e-estados/ma.html" className="hover:text-green-400 transition-colors">
+              <a
+                href="https://www.ibge.gov.br/cidades-e-estados/ma.html"
+                className="hover:text-green-400 transition-colors"
+              >
                 IBGE
               </a>
             </li>
             <li>
-              <a href="https://www.neoenergia.com/w/queimadas-no-brasil-por-que-devemos-nos-preocupar-" className="hover:text-green-400 transition-colors">
+              <a
+                href="https://www.neoenergia.com/w/queimadas-no-brasil-por-que-devemos-nos-preocupar-"
+                className="hover:text-green-400 transition-colors"
+              >
                 Neoenergia
               </a>
             </li>
             <li>
-              <a href="https://terrabrasilis.dpi.inpe.br/queimadas/bdqueimadas/" className="hover:text-green-400 transition-colors">
+              <a
+                href="https://terrabrasilis.dpi.inpe.br/queimadas/bdqueimadas/"
+                className="hover:text-green-400 transition-colors"
+              >
                 INPE
               </a>
             </li>
           </ul>
         </div>
 
-        <div className="flex flex-col items-center md:start">
+        <div className="flex flex-col items-center md:items-start">
           <h4 className="text-lg font-semibold mb-3 font-[Poppins]">Contato</h4>
-          <p className="text-sm mb-3">alertafloresta@gmail.com.br</p>
+          <p className="text-sm mb-3 text-center md:text-left">
+            alertafloresta@gmail.com.br
+          </p>
           <div className="flex space-x-4">
             <a
               href="#"
@@ -87,10 +98,20 @@ export default function Footer() {
             >
               <FaEnvelope />
             </a>
-            <a href="https://github.com/desafio-05-trilhas/front-end" target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors">
+            <a
+              href="https://github.com/desafio-05-trilhas/front-end"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-green-400 transition-colors text-xl"
+            >
               <FaGithub />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-green-400 transition-colors text-xl"
+            >
               <FaLinkedin />
             </a>
           </div>

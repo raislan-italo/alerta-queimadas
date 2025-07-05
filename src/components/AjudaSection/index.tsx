@@ -39,14 +39,14 @@ export default function AjudaSection() {
       </div>
 
       {/* Bloco 2 */}
-      <div className="bg-[#3f6b0d] text-white py-12 px-6 md:px-12 rounded-md mx-4 md:mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6 max-w-7xl">
+      <div className="bg-[#3f6b0d] text-white py-12 px-6 md:px-12 rounded-3xl mx-4 md:mx-auto flex flex-col md:items-center md:justify-between gap-6 max-w-7xl">
         <div className="md:w-2/3">
-          <h4 className="text-2xl md:text-3xl font-bold mb-3">Saiba mais!</h4>
+          <h4 className="text-2xl md:text-[40px] font-bold mb-3">Saiba mais!</h4>
           <p className="text-sm md:text-base">
             Descubra onde e quando as queimadas estão acontecendo, visualize gráficos por região e acompanhe dados em tempo real. Nosso painel reúne informações atualizadas para ajudar na prevenção e no combate às queimadas. Clique e explore!
           </p>
         </div>
-        <Button className="bg-[#acd137] text-black hover:bg-[#c3ff00] transition-colors text-lg font-semibold w-fit self-center md:self-auto">
+        <Button className="bg-[#acd137] text-black hover:bg-[#c3ff00] transition-all duration-300 ease-in-out hover:scale-105  text-lg font-semibold w-fit self-center md:self-auto">
           <Link to="/dashboard">Acessar Dashboard</Link>
         </Button>
       </div>

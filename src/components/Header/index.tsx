@@ -80,7 +80,7 @@ export default function Header() {
             <Link
               key={link.to}
               to={link.to}
-              className={`flex items-center gap-1 px-3 py-1 rounded-lg text-sm border border-[#ACD137] transition-all duration-300 ease-in-out hover:bg-[#ACD137] hover:text-black hover:scale-105  ${
+              className={`flex items-center gap-2 px-3 py-1 rounded-lg text-sm border border-[#ACD137] transition-all duration-300 ease-in-out hover:bg-[#ACD137] hover:text-black hover:scale-105  ${
                 location.pathname === link.to ? "bg-[#585D35]" : "bg-[#082916]"
               }`}
             >

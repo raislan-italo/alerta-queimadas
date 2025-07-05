@@ -4,15 +4,27 @@ import postivio from "/src/assets/icons/positivo.png";
 export default function PublicoAlvoSection() {
   const items = [
     {
-      title: "Cidadãos conscientes",
+      title: (
+        <>
+          Cidadãos <br/> conscientes
+        </>
+      ),
       text: "Esta plataforma é destinada a cidadãos que desejam se informar sobre os impactos das queimadas e contribuir para sua prevenção.",
     },
     {
-      title: "Jovens e adultos em busca de dados e ferramentas",
+      title: (
+        <>
+          Jovens e adultos em busca <br /> de dados e ferramentas
+        </>
+      ),
       text: "Permite a busca de dados atualizados, informações confiáveis e ferramentas práticas para denunciar queimadas — de forma anônima ou identificada.",
     },
     {
-      title: "Educadores, estudantes e gestores",
+      title: (
+        <>
+          Educadores, estudantes <br /> e gestores
+        </>
+      ),
       text: "É um recurso útil para professores, estudantes, pesquisadores e gestores públicos que necessitam de acesso a indicadores socioambientais e materiais de apoio sobre o tema.",
     },
   ];
@@ -22,12 +34,12 @@ export default function PublicoAlvoSection() {
       <h2 className="text-3xl md:text-4xl font-extrabold text-[#3f6b0d] mb-10">
         Para quem é essa plataforma?
       </h2>
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-15">
         {items.map((item, index) => (
-          <Card key={index} className="w-full md:w-80 hover:scale-105 transition-transform cursor-pointer">
+          <Card key={index} className="w-full md:w-100 hover:scale-105 transition-transform cursor-pointer">
             <CardHeader>
               <img src={postivio} alt="Ícone positivo" className="w-10 mx-auto mb-2"/>
-              <CardTitle className="text-lg">{item.title}</CardTitle>
+              <CardTitle className="text-xl">{item.title}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 text-lg text-center">{ item.text }</p>
